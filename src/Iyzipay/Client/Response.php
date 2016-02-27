@@ -12,6 +12,7 @@ class Response implements FromJson
     private $locale;
     private $systemTime;
     private $conversationId;
+    protected $paymentPageUrl;
 
     public function getRawResult()
     {
@@ -91,6 +92,22 @@ class Response implements FromJson
     public function setConversationId($conversationId)
     {
         $this->conversationId = $conversationId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPaymentPageUrl()
+    {
+        return $this->paymentPageUrl;
+    }
+
+    /**
+     * @param mixed $paymentPageUrl
+     */
+    public function setPaymentPageUrl($paymentPageUrl)
+    {
+        $this->paymentPageUrl = $paymentPageUrl;
     }
 
     public function fromJson($jsonResult)

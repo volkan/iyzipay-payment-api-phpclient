@@ -36,5 +36,8 @@ class ResponseMapper
         if (isset($jsonResult->systemTime)) {
             $response->setSystemTime($jsonResult->systemTime);
         }
+        if (isset($jsonResult->paymentPageUrl)) {
+            $response->setPaymentPageUrl($jsonResult->paymentPageUrl);
+        }
     }
 }
